@@ -2,7 +2,7 @@ import React from "react";
 
 interface ProfileProps {}
 
-const Profile: React.FC<ProfileProps> = ({}) => {
+const Profile: React.FC<ProfileProps> = () => {
   return (
     <div>
       <h1>Profile</h1>

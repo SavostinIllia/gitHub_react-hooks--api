@@ -1,5 +1,5 @@
 import React from "react";
-
+import { NavLink } from "react-router-dom";
 interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
@@ -8,14 +8,14 @@ const Navbar: React.FC<NavbarProps> = () => {
       <div className="navbar-brand">GitHub Search</div>
       <ul className="navbar-nav">
         <li className="nav-item">
-          <a href="/" className="nav-link">
+          <NavLink exact to="/" className="nav-link">
             Home Page
-          </a>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <a href="/" className="nav-link">
+          <NavLink to="/about" className="nav-link">
             Information
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>
