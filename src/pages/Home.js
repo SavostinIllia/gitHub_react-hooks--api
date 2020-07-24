@@ -5,6 +5,7 @@ import { GithubContext } from "../context/github/githubContext";
 
 const Home = () => {
   const { loading, users } = useContext(GithubContext);
+
   return (
     <>
       <Search />

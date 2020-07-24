@@ -33,6 +33,9 @@ export const GithubState = ({ children }) => {
     const response = await axios.get(
       withCreds(`https://api.github.com/search/users?q=${value}&`)
     );
+    if (response.data.items.length === 0) {
+      console.log("rere");
+    }
 
     dispatch({
       type: SEARCH_USERS,
@@ -44,7 +47,7 @@ export const GithubState = ({ children }) => {
     setLoading();
 
     const response = await axios.get(
-      withCreds(`https://api.github.com/search/users?${name}?`)
+      withCreds(`https://api.github.com/users/${name}?`)
     );
 
     dispatch({
@@ -56,7 +59,7 @@ export const GithubState = ({ children }) => {
   const getRepos = async (name) => {
     setLoading();
     const response = await axios.get(
-      withCreds(`https://api.github.com/search/users?${name}/repos?per_page=5&`)
+      withCreds(`https://api.github.com/users/${name}/repos?per_page=5&`)
     );
     dispatch({
       type: GET_REPOS,
