@@ -1,9 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-interface AboutProps {}
-
-const About: React.FC<AboutProps> = () => {
+const About = () => {
   return (
     <div className="jumbotron">
       <h1 className="display-4">Hello, world!</h1>
