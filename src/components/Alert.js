@@ -1,15 +1,7 @@
 import React, { useContext } from "react";
 import { AlertContext } from "../context/alert/alertContext";
 
-interface AlertProps {
-  alert: {
-    type?: string;
-    text?: string;
-    hide?: () => void;
-  };
-}
-
-const Alert: React.FC<AlertProps> = () => {
+const Alert = () => {
   const { alert, hide } = useContext(AlertContext);
 
   if (!alert) return null;

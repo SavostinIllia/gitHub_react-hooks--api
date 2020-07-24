@@ -1,18 +1,18 @@
 import React, { useContext, useState } from "react";
 import { AlertContext } from "../context/alert/alertContext";
+import { GithubContext } from "../context/github/githubContext";
 
-interface SearchProps {}
-
-const Search: React.FC<SearchProps> = ({}) => {
+const Search = ({}) => {
   const [value, setValue] = useState("");
-
   const { show } = useContext(AlertContext);
-  const onsubmit = (e: any) => {
+  const github = useContext(GithubContext);
+
+  const onsubmit = (e) => {
     if (e.key !== "Enter") {
       return;
     }
     if (value.trim()) {
-      console.log(value);
+      github.search(value.trim());
     } else {
       show("Enter the user data");
     }

@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface CardProps {}
-
-const Card: React.FC<CardProps> = ({}) => {
+const Card = ({}) => {
   return (
     <div className="card">
       <img src={""} alt={""} className="card-img-top" />

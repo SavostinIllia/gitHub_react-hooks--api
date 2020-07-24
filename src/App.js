@@ -8,7 +8,7 @@ import Alert from "./components/Alert";
 import AlertState from "./context/alert/AlertState";
 import { GithubState } from "./context/github/GithubState";
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <GithubState>
       <AlertState>
