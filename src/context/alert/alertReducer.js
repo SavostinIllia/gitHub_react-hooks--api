@@ -1,8 +1,8 @@
 import { SHOW_ALERT, HIDE_ALERT } from "../types";
 
 const handlers = {
-  SHOW_ALERT: (state, action) => action.payload,
-  HIDE_ALERT: () => null,
+  [SHOW_ALERT]: (state, action) => action.payload,
+  [HIDE_ALERT]: () => null,
   DEFAULT: (state) => state,
 };
 

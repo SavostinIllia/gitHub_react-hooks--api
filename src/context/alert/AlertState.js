@@ -7,7 +7,7 @@ const AlertState = ({ children }) => {
   const [state, dispatch] = useReducer(alertReducer, null);
 
   const hide = () => dispatch({ type: HIDE_ALERT });
-  const show = ({ text, type = "secondary" }) => {
+  const show = (text, type = "secondary") => {
     dispatch({ type: SHOW_ALERT, payload: { type, text } });
   };
 

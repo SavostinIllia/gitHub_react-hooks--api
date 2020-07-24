@@ -4,7 +4,7 @@ import { AlertContext } from "../context/alert/alertContext";
 interface AlertProps {
   alert: {
     type?: string;
-    text: string;
+    text?: string;
     hide?: () => void;
   };
 }
